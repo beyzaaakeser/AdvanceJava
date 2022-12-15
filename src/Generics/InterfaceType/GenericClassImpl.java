@@ -1,8 +1,9 @@
 package Generics.InterfaceType;
 
-// 1) eger bir generic interface implement ederseniz, class da generic olmali
-// 2) Core javadan gelen kisim interface classlarin icindeki methodlari override etmelisin implement etmelisin kullanabilmek icin
-public class GenericClassImpl<T> implements  GenericInterface<T>{
+// 1) eger bir generic interface implement ederseniz, o zaman Class da generic olmali.
+// 2) Core javadan gelen bilgi, madem ben bu interface'den bir concrete class implements ettim o zaman nolacak methodlarini da implement etmem gerekir.
+//    yani interface classlarin icindeki methodlari override etmelisin implement etmelisin kullanabilmek icin
+public class GenericClassImpl<T> implements GenericInterface<T>{
 
     @Override
     public void setValue(T t) {

@@ -1,10 +1,11 @@
 package Generics.Bounding;
 
 public class GenericUpperBound<T extends Number> { // Ustten sinirliyorum. Ust sinir Number
-
     // Parenti number olan butun childlarda ben bu classi kullanabilirim demek bu.
 
-    private T[] numberArray;
+
+
+    private T[] numberArray; // field ==> T[] data tipinde array
 
 
 
@@ -41,7 +42,7 @@ public class GenericUpperBound<T extends Number> { // Ustten sinirliyorum. Ust s
         // GenericUpperBound<String> obj2 = new GenericUpperBound(strArray);
     }
 
-    // class generic olur method generic olur ama field generic olmaz data turunu girmek gerekir fieldlarda
+        // class generic olur method generic olur ama field generic olmaz data turunu girmek gerekir fieldlarda
 
 
 
