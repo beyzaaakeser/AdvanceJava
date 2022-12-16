@@ -4,13 +4,26 @@ import java.io.*;
 
 public class Serialization_Deserialization {
 
+    /*
+        Serialization : Elimdeki class'i obje olarak bilgisayarimdaki hard diske gondericem.
+        Deserialization : Daha sonra bu gonderdigim datalari obje olarak almam lazim bu da Deserialization oluyor.
+
+        Eger ben bir classtan uretilen objeleri javanin serialization yapisiyla transfer edilmesini istiyorsam ilk olarak
+        Serializable interface'ine implement ederiz.Yani bu class'i isaretlemis oluyoruz.
+        Benim bu classim transfer edilecek demis oluyoruz
+     */
+
     public static void main(String[] args) {
-        // writeObject(); 'de serilization yapiyoruz
+        // writeObject(); //'de serilization yapiyoruz User objelerimizi Serializable classindan implement etmeseydik
+        // bunu geri cagirdigimizda obje gelmezdi bize.Jvm bunu anlamazdi exception atardi
          readObject(); // de deserilization yapmis olduk
     }
 
-    // writeObject()
+    // writeObject() ==> Serialization yapiyoruz yani JVM'in disina cikariyorum bu kodlarla
     private static void writeObject(){
+
+        // Javada File islemlerinde write islemi yaparken FileOutputStream classi kullanilir.
+
         System.out.println("User Objeleri olusturuluyor...");
         User user1 = new User(1L,"Yunus","123456789");
         User user2 = new User(2L,"Yusuf","289876843");
@@ -29,7 +42,7 @@ public class Serialization_Deserialization {
         }
     }
 
-    // readObject()
+    // readObject() ==> Deserialization yapiyoruz
     private static void readObject(){
         // Javada File islemlerinde okuma islemi yaparken FileInputStream classi kullanilir.
         try(FileInputStream fis = new FileInputStream("user.dat")){ // okunacak dosyayi belirledik.

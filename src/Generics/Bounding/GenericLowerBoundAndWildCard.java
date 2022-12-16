@@ -6,6 +6,8 @@ import java.util.List;
 public class GenericLowerBoundAndWildCard {
 
     public static void main(String[] args) {
+
+        // *********** addElements **********
         List<Object> ol = new ArrayList<>();
         addElements(ol);
 
@@ -14,7 +16,7 @@ public class GenericLowerBoundAndWildCard {
 
         List<Double> dl = new ArrayList<>();
         // addElements(dl); // CTE ,
-                        // Generic oncesi yapilaarda run time error olurdu. ama generic ile cte'ye cevrildi bize sagladigi yarar bu.
+                        // Generic oncesi yapilarda run time error olurdu. ama generic ile cte'ye cevrildi bize sagladigi yarar bu.
 
         // *********** printElements **********
 //        List<String> st = new ArrayList<>();   1
@@ -32,12 +34,13 @@ public class GenericLowerBoundAndWildCard {
         printObj(objectList);
 
 
-
-
     }  // main
+
+
+
     public static void addElements(List<?super Integer> list){ // alttan sinirliyorum
         // ? : WildCard ( tipi bilinmeyen )
-        // super Integer : bana Integer'in parent'larini getir demek oluyor.
+        // super Integer : bana Integer'in parent'larini getir demek oluyor. Alt siniri belirliyoruz alt sinir Integer
 
         for (int i = 1; i<=10 ; i++){
             list.add(i);

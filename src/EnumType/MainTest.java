@@ -3,12 +3,20 @@ package EnumType;
 public class MainTest {
 
     public static void main(String[] args) {
+
+     /*
+        Eski tarz yapida methoda farkli bir deger verdigimizde hata vermiyor. cikti da vermiyor ama arka tarafta kod calisiyor
+        CTE vermedigi cin sorun yok saniyorsun ama var
+        Enum yapi ise bunu engelledi. daha kodu yazarken farkli bir deger girildiginde CTE veriyor.
+     */
+
+
         useConstantMethod(1);
         useConstantMethod(2);
         useConstantMethod(3);
         useConstantMethod(4);
         useConstantMethod(100);
-        useConstantMethod(5); // cte vermedi .
+        useConstantMethod(5); // cte vermedi. ama cikti da vermedi. arka tarafta calisiyor
         // iste enum yapi bize bunu sagliyor veremezsin diyor enumda farkli bir deger girince cte oluyor
 
         System.out.println("------------------------");
@@ -17,7 +25,7 @@ public class MainTest {
         useEnumMethod(TransactionType.PAYMENT);
         useEnumMethod(TransactionType.WITHDRAW);
         useEnumMethod(TransactionType.OTHER);
-        // useEnumMethod(TransactionType.A);  CTE
+        // useEnumMethod(TransactionType.A);  CTE enum yapida bana baska bir deger girmeme izin vermedi
 
     }
 
@@ -37,6 +45,7 @@ public class MainTest {
     }
 
 
+
     // enum yapi ile
     private static void useEnumMethod(TransactionType transactionType){
             if (transactionType == TransactionType.DEPOSIT){
@@ -49,7 +58,14 @@ public class MainTest {
                 System.out.println("Money is transfering");
             }else if (transactionType == TransactionType.OTHER) {
                 System.out.println("Other transaction");
-        }
+            }
+
+
+            // Not : Enum yapiya has methodlar
+            System.out.println("Enum Name : "+ transactionType.name()); // Enum ismini ekranayazdim
+            System.out.println("Enum Coder Value : "+ transactionType.getTransactionCode()); // Enum'in numeric degerini aldim. islem sayisi kacsa onu verecek.
+            System.out.println("Enum Ordinal : "+ transactionType.ordinal()); // Enum'in sirasi kacsa onu alir
+
     }
 
 
