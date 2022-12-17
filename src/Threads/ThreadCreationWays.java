@@ -91,7 +91,9 @@ public class ThreadCreationWays {
         });
         thread4.start();
 
-        System.out.println("Main Methodu bitti ");
+        System.out.println("Main Methodu bitti "); // bu yazinin ciktida ne zaman gozukecegi ile ilgili kesin bir sey soyleyemeyiz
+
+
         Thread thread5 = new Thread(() -> {
             System.out.println("thread5 calisti");
         });

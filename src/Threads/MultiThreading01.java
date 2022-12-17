@@ -48,8 +48,8 @@ class CounterWithoutMultiThread {
     public void countMe() throws InterruptedException {
         for (int i = 1; i<=10; i++){
             Thread.sleep(500); // burada main thread'i 0.5 saniye yavaslatir.
-            // normal bir class icerisindeyim bir thread'de degilim. ve bu class icinde yavaslat diyorsam yavaslatacagi tek
-            // thread var ==> thread
+            // normal bir class icerisindeyim bir thread'de degilim. ve bu class icinde yavaslat diyorsam
+            // yavaslatacagi tek thread var ==> main thread
             System.out.println("i= "+i+" Thread number : "+ threadNum);
         }
     }
