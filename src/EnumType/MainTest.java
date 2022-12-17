@@ -62,7 +62,7 @@ public class MainTest {
 
 
             // Not : Enum yapiya has methodlar
-            System.out.println("Enum Name : "+ transactionType.name()); // Enum ismini ekranayazdim
+            System.out.println("Enum Name : "+ transactionType.name()); // Enum ismini ekrana yazdim
             System.out.println("Enum Coder Value : "+ transactionType.getTransactionCode()); // Enum'in numeric degerini aldim. islem sayisi kacsa onu verecek.
             System.out.println("Enum Ordinal : "+ transactionType.ordinal()); // Enum'in sirasi kacsa onu alir
 

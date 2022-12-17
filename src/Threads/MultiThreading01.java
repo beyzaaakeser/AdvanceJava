@@ -22,7 +22,7 @@ public class MultiThreading01 {
         counter4.start();
         counter3.join(); // counter3 threadi bitesiye kadar bekle
         counter4.join(); // counter4 threadi bitesiye kadar bekle
-        // join methodu bu thread bitmeden alt satira gecme diyor. bir neci orada single thread varmis gibi davraniyor.
+        // join methodu bu thread bitmeden alt satira gecme diyor. bir nevi orada single thread varmis gibi davraniyor.
         long endTime2 = System.currentTimeMillis(); // bu end time hesaplanmadan once joinleri belirlememiz lazim.
         System.out.println("WithMultiThread ile gecen sure : "+ (endTime2-startTime2));
 
@@ -34,6 +34,8 @@ public class MultiThreading01 {
 }
 
 class CounterWithoutMultiThread {
+
+    // field
     private int threadNum;
 
     // constructor
@@ -45,15 +47,18 @@ class CounterWithoutMultiThread {
     // method
     public void countMe() throws InterruptedException {
         for (int i = 1; i<=10; i++){
-            Thread.sleep(500); // bu main thread'i 0.5 saniye yavaslatir.
-            System.out.println("i "+i+"Thread number : "+ threadNum);
+            Thread.sleep(500); // burada main thread'i 0.5 saniye yavaslatir.
+            // normal bir class icerisindeyim bir thread'de degilim. ve bu class icinde yavaslat diyorsam yavaslatacagi tek
+            // thread var ==> thread
+            System.out.println("i= "+i+" Thread number : "+ threadNum);
         }
     }
-
 }
 
 
 class CounterWithMultiThread extends Thread{
+
+    // field
     private int threadNum;
 
     // constructor
@@ -76,7 +81,7 @@ class CounterWithMultiThread extends Thread{
     public void countMe() throws InterruptedException {
         for (int i = 1; i<=10; i++){
             Thread.sleep(500); // bu main thread'i 0.5 saniye yavaslatir.
-            System.out.println("i "+i+"Thread number : "+ threadNum);
+            System.out.println("i= "+i+" Thread number : "+ threadNum);
         }
     }
 }

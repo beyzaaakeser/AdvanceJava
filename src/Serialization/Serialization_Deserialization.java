@@ -21,7 +21,6 @@ public class Serialization_Deserialization {
 
     // writeObject() ==> Serialization yapiyoruz yani JVM'in disina cikariyorum bu kodlarla
     private static void writeObject(){
-
         // Javada File islemlerinde write islemi yaparken FileOutputStream classi kullanilir.
 
         System.out.println("User Objeleri olusturuluyor...");
