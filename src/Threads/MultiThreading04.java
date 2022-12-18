@@ -1,4 +1,8 @@
 package Threads;
+/*
+    synchronized (this) diyincce ayni method icinde bile olsa bu ifadenin yazildigi yer synchronized oluyor.
+    (this) ise blogun yazili oldugu methodu cagiran thread ne ise bu this o.
+ */
 
 public class MultiThreading04 {
 

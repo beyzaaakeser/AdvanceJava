@@ -28,18 +28,19 @@ public class MultiThreading03 {
         });
         thread2.start();
 
-    }
+    } // main method
 
-}
+} // class
 
 
 
 class Brackets{
+
     //ciktinin duzgun gozukebilmesi icin generateBrackets() methoduna ayni anda sadece 1 thread in
     //girebiliyor olmasi icin "synchronized" kullanildi
     public synchronized void generateBrackets(){
         for(int i = 1; i<11 ; i++){
-            if (i<=5){
+            if (i<6){
                 System.out.print("[");
             }else {
                 System.out.print("]");

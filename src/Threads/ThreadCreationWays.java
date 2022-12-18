@@ -26,8 +26,8 @@ public class ThreadCreationWays {
         Ben start() yapmadan run() dedigimde de ayni sonucu aliyorum.
 
         Ama run() methodu ile start() methodu arasindaki temel fark sunlardir:
-        - start() methodu thread'i olusturur create eder daha sonra run methoduna gider onu calistirir. Ama su anda kanlki canli bir thread vardir ortada
-        - run() methodu ise, threadi create etmez. Sanki bir class'in icerisinde bir methodu cagiriyormus gibi onbu cagirir sadece. Dolayisiyla o thread havuzuna
+        - start() methodu thread'i olusturur create eder daha sonra run methoduna gider onu calistirir. Ama su anda kanki canli bir thread vardir ortada
+        - run() methodu ise, threadi create etmez. Sanki bir class'in icerisinde bir methodu cagiriyormus gibi on u cagirir sadece. Dolayisiyla o thread havuzuna
         girmemistir thread gibi davranmaz. Single bir sey yaziyormussunuz gibi onu calistirir.
         Ben bu methodun canli hale gelip arka planda durmadan bir seyler yapmasini, calistirmasini istiyorsam o zaman ben start() methodunu
         kullanicam ,run degil.
