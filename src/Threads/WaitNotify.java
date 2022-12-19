@@ -1,4 +1,9 @@
 package Threads;
+/*
+    notify dedigim anda soyle calisir : wait olan butun threadlere mesaj gider. wait canlanir.
+    eger wait koydugumuzda notify demezsek, konsolda kendimiz kareye basip durdurana kadar o thread bekler durur.
+    Notify gelene kadar arka planda calisir. kilitlenmez ama o thread bekler (Scanner'da kullanicinin bir sey girmediginde beklemesi gibi)
+ */
 
 public class WaitNotify {
 
@@ -7,7 +12,7 @@ public class WaitNotify {
     public static void main(String[] args) {
         WaitNotify obj = new WaitNotify();
 
-        // thread1
+        // thread1   ==> Para Cekme threadi
         Thread thread1 = new Thread(new Runnable() {
             @Override
             public void run() {
@@ -18,12 +23,13 @@ public class WaitNotify {
         thread1.start();
 
 
-        // thread2
+        // thread2   ==> Para Yatirma threadi
         Thread thread2 = new Thread(new Runnable() {
             @Override
             public void run() {
                 try {
-                    Thread.sleep(5000);
+                    Thread.sleep(5000); // eger uyutmazsam iki thread ayni anda calisacak biri parayi atar biri parayi ceker.
+                                             // waiti dahi goremeyiz. Bekleme islemi dahi gerceklesmeden islemler hizli sekilde olur biter.
                 } catch (InterruptedException e) {
                     throw new RuntimeException(e);
                 }

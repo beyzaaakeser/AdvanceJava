@@ -63,8 +63,9 @@ class Brackets2{
           System.out.println("");
 
       } // yani ayni methodda bu blogu senkronize haline getirdik
+        // Bu yukaridaki kisimda [] bastiriyorum ekrana
 
-
+        // Bu asagidaki kisimda ise bekleme yaptiriyorum
         // her threadden sonra bir tane sleep methodu gelsin diye
         for (int i = 1; i <6 ; i++) {
             try {
