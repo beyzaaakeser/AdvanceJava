@@ -12,6 +12,9 @@ package Threads;
   Kargasa olusmasin diye benim icin hayati onem arz eden degiskenlerin onune volatile keywordu koyuyoruz.
   Kendi cachin uzerinden buna ulasamazsin her halukarda Rame gidip bu degiskenin degerini alacaksin diyoruz.
   Deger birligi saglamis oluyoruz her thread ayni degeri goruyor ve kullaniyor.
+
+
+  Volatile obje icin de variable icin de kullanilabilir. Degiskenler uzerinde kullaniliyor.
  */
 
 
@@ -55,23 +58,6 @@ public class Volatile {
         });
         thread2.start();
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 }
