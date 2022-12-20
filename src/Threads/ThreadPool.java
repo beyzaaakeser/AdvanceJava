@@ -6,9 +6,10 @@ import java.util.concurrent.Executors;
 public class ThreadPool {
 
     public static void main(String[] args) {
-        ExecutorService service = Executors.newFixedThreadPool(2); // bu satir threadpoolu olusturuyor, thread havuzunun icinde kac tane thread olacagini soyledik.
+        ExecutorService service = Executors.newFixedThreadPool(2); // bu satir threadpoolu olusturuyor,
+                                                                           // thread havuzunun icinde kac tane thread olacagini soyledik.
 
-        // 10 adet thread olusturuldu
+        // instance variable olarak 10 adet thread olusturuldu
         ThreadCreator thread1 = new ThreadCreator("Thread1 ");
         ThreadCreator thread2 = new ThreadCreator("Thread2 ");
         ThreadCreator thread3 = new ThreadCreator("Thread3 ");
@@ -29,7 +30,8 @@ public class ThreadPool {
         service.execute(thread7);
         service.execute(thread8);
         service.execute(thread9);
-        service.execute(thread10);
+        service.execute(thread10); // burada sunu yapmis oluyorum, bu threadlerin 2 tanesini alacak ya,
+                                    // bittigi zaman yeniden thread olusmayacak icerideki thread digerlerinin isini yapacak
 
         service.shutdown(); // thread havuzundaki threadler beklemeye devam eder.
 

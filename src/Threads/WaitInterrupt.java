@@ -24,7 +24,8 @@ public class WaitInterrupt {
                 try {
                     Thread.sleep(5000);
                 } catch (InterruptedException e) {
-                    throw new RuntimeException(e);
+                    //throw new RuntimeException(e);
+                    e.printStackTrace();
                 }
                 obj.deposit(2000);
                 thread1.interrupt(); // thread2 burada kibarca thread1'i sonlandiriyor
