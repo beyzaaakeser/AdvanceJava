@@ -6,7 +6,7 @@ public class MainTest {
 
      /*
         Eski tarz yapida methoda farkli bir deger verdigimizde hata vermiyor. cikti da vermiyor ama arka tarafta kod calisiyor
-        CTE vermedigi cin sorun yok saniyorsun ama var
+        CTE vermedigi icin sorun yok saniyorsun ama var
         Enum yapi ise bunu engelledi. daha kodu yazarken farkli bir deger girildiginde CTE veriyor.
      */
 
